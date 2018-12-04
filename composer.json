@@ -1,0 +1,19 @@
+{
+    "name": "gzoran/laravel-api-response",
+    "description": "Laravel API 响应封装",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike <zhengzhe94@gmail.com>",
+            "email": "zhengzhe94@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/http": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gzoran\\Http\\": "src/"
+        }
+    }
+}

@@ -1,6 +1,9 @@
-# laravel-api-response
+<h1 align="center">Laravel Api Response</h1>
 
-Laravel API 响应封装
+<p align="center">Laravel API 响应封装</p>
+
+[![Build Status](https://travis-ci.org/gzoran/laravel-api-response.svg?branch=master)](https://travis-ci.org/gzoran/laravel-api-response)
+![StyleCI build status](https://github.styleci.io/repos/160281187/shield) 
 
 ## 框架要求
 

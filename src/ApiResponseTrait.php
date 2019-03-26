@@ -1,6 +1,7 @@
 <?php
 
-namespace Gzoran\Http;
+namespace Gzoran\ApiResponse;
+
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 /**
@@ -53,6 +54,12 @@ trait ApiResponseTrait
      */
     protected function created($data = [], array $headers = [])
     {
+        if (empty($data)) {
+            $data = [
+                static::$message => 'Created'
+            ];
+        }
+
         return $this->response($data, 201, $headers);
     }
 

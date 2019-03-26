@@ -103,3 +103,7 @@ internalServerError($data = [], array $headers = [])
 serviceUnavailable($data = [], array $headers = [])
 
 ```
+
+## License
+
+MIT

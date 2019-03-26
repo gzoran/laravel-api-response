@@ -1,11 +1,20 @@
 <?php
 
+/*
+ * This file is part of the gzoran/laravel-api-response.
+ *
+ * (c) gzoran <zhengzhe94@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Gzoran\ApiResponse;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 /**
- * Api response trait
+ * Api response trait.
  *
  * @author Mike <zhengzhe94@gmail.com>
  */
@@ -15,9 +24,11 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
-     * @param null $data
-     * @param int $status
+     *
+     * @param null  $data
+     * @param int   $status
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function response($data = null, int $status = 200, array $headers = [])
@@ -27,15 +38,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return array|\Illuminate\Http\Response
      */
     protected function ok($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'OK'
+                static::$message => 'OK',
             ];
         }
 
@@ -48,15 +61,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function created($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Created'
+                static::$message => 'Created',
             ];
         }
 
@@ -65,7 +80,9 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function accepted(array $headers = [])
@@ -75,7 +92,9 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function notContent(array $headers = [])
@@ -85,15 +104,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function badRequest($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Bad Request'
+                static::$message => 'Bad Request',
             ];
         }
 
@@ -102,15 +123,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function unauthorized($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Unauthorized'
+                static::$message => 'Unauthorized',
             ];
         }
 
@@ -119,15 +142,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function forbidden($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Forbidden'
+                static::$message => 'Forbidden',
             ];
         }
 
@@ -136,15 +161,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function notFound($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Not Found'
+                static::$message => 'Not Found',
             ];
         }
 
@@ -153,15 +180,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function methodNotAllowed($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Method Not Allowed'
+                static::$message => 'Method Not Allowed',
             ];
         }
 
@@ -170,15 +199,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function notAcceptable($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Not Acceptable'
+                static::$message => 'Not Acceptable',
             ];
         }
 
@@ -187,15 +218,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function requestTimeout($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Request Timeout'
+                static::$message => 'Request Timeout',
             ];
         }
 
@@ -204,15 +237,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function gonfilct($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Gonfilct'
+                static::$message => 'Gonfilct',
             ];
         }
 
@@ -221,15 +256,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function gone($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Gone'
+                static::$message => 'Gone',
             ];
         }
 
@@ -238,15 +275,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function payloadTooLarge($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Payload Too Large'
+                static::$message => 'Payload Too Large',
             ];
         }
 
@@ -255,15 +294,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function requestURITooLong($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Request-URI Too Long'
+                static::$message => 'Request-URI Too Long',
             ];
         }
 
@@ -272,15 +313,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function unsupportedMediaType($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Unsupported Media Type'
+                static::$message => 'Unsupported Media Type',
             ];
         }
 
@@ -289,15 +332,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function unprocessableEntity($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Unprocessable Entity'
+                static::$message => 'Unprocessable Entity',
             ];
         }
 
@@ -306,15 +351,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function tooManyRequest($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Too Many Request'
+                static::$message => 'Too Many Request',
             ];
         }
 
@@ -323,15 +370,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function internalServerError($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Internal Server Error'
+                static::$message => 'Internal Server Error',
             ];
         }
 
@@ -340,15 +389,17 @@ trait ApiResponseTrait
 
     /**
      * @author Mike <zhengzhe94@gmail.com>
+     *
      * @param array $data
      * @param array $headers
+     *
      * @return \Illuminate\Http\Response
      */
     protected function serviceUnavailable($data = [], array $headers = [])
     {
         if (empty($data)) {
             $data = [
-                static::$message => 'Service Unavailable'
+                static::$message => 'Service Unavailable',
             ];
         }
 

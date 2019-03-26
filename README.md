@@ -12,7 +12,7 @@ Laravel >= 5.5
 ## 安装
 
 ```shell
-composer require "gzoran/laravel-api-response:~1.0"
+composer require "gzoran/laravel-api-response:~2.0"
 ```
 
 ## 使用
